@@ -144,6 +144,34 @@ h1 {
     transform: translateY(-10px);
 }
 
+.preview-image {
+    position: absolute;
+    top: -220px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+    z-index: 10;
+    width: 400px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.project-card:hover .preview-image {
+    display: block;
+    opacity: 1;
+    transform: translateX(-50%) translateY(-10px);
+}
+
+.preview-image img {
+    width: 100%;
+    border-radius: 16px;
+}
+
+
+
 @keyframes fadeIn {
     from {
         opacity: 0;
