@@ -1,0 +1,223 @@
+body {
+    background-color: rgb(213, 208, 208);
+    background-image: url('wallppaaper.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: flex-start; 
+    align-items: center;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: white;
+    text-align: center;
+}
+
+h1 {
+    font-size: 4rem;
+    font-family: "Funnel Display", serif;
+    color: white;
+    text-shadow: 4px 4px 15px rgba(0, 0, 0, 0.8);
+    letter-spacing: 3px;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+.about-me {
+    background-color: rgba(0, 0, 0, 0.75);
+    color: white;
+    border-radius: 20px;
+    padding: 50px;
+    max-width: 900px;
+    width: 100%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid #36a18c;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5));
+}
+
+.about-me:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.9);
+}
+
+.about-me h2 {
+    font-size: 2.5rem;
+    font-family: "Teko", serif;
+    font-weight: 400;
+    color: white;
+}
+
+.about-me p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 20px;
+}
+
+.about-me p::before {
+    content: "👨‍💻 ";
+    font-size: 1.8rem;
+}
+
+.about-me p:hover {
+    color: #36a18c;
+    transition: color 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+    margin-top: 60px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+nav {
+    position: relative;
+    width: 900px;
+    height: 50px;
+    background-color: beige;
+    border-radius: 100px;
+    font-size: 0;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align:justify;
+    flex-wrap: wrap;
+}
+
+nav a {
+    font-size: 20px;
+    text-transform: uppercase;
+    color: rgb(72, 154, 116);
+    text-decoration: none;
+    line-height: 50px;
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    text-align: center;
+    font-family: "Teko", serif;
+    width: 150px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0 15px;
+}
+
+nav a:hover {
+    color: white;
+    text-shadow: 1px 1px 5px black;
+    transform: scale(1.05);
+}
+
+nav a:hover::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 170px;
+    height: 49.5px;
+    background-color: rgba(148, 137, 137, 0.3);
+    z-index: -1;
+    border-radius: 100px;
+    transition: all 0.3s ease;
+}
+
+nav .animation {
+    position: absolute;
+    height: 50px;
+    top: 0;
+    z-index: 0;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    background-color: #36a18c;
+}
+
+.project-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    color: white;
+    max-width: 400px;
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    .about-me {
+        padding: 20px;
+        margin-top: 40px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    nav a {
+        font-size: 18px;
+        width: auto;
+        padding: 10px 20px;
+    }
+}
+
+.ionicons {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    display: flex;
+    gap: 20px;
+}
+
+
+ion-icon {
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+}
+
+
+
+
+ion-icon.logo-youtube {
+    left: 10px;
+}
+ion-icon.mail-outline {
+    position: relative;
+    right: 10px;
+    z-index: 10;
+    color: white;
+}
